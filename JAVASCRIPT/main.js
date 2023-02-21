@@ -68,6 +68,9 @@
 // * 64. TEST
 // * 65. Arrays
 // * 66. Create an Array
+// * 67. Accessing Elements
+// * 68. Update Elements
+// * 69. Arrays with let and const
 
 // !=============================================
 // !=============================================
@@ -1504,3 +1507,56 @@ console.log(myName);
 // !=============================================
 
 // * 66. Create an Array
+
+const hobbies = ["Usama", "Wolf", "Alpha97"];
+
+console.log(hobbies);
+
+// !=============================================
+// !=============================================
+
+// * 67. Accessing Elements
+
+const famousSayings = [
+  "Fortune favors the brave.",
+  "A joke is a very serious thing.",
+  "Where there is love there is life.",
+];
+
+const listItem = famousSayings[0];
+
+console.log(listItem);
+console.log(famousSayings[2]);
+console.log(famousSayings[3]); //output: undefined
+
+// !=============================================
+// !=============================================
+
+// * 68. Update Elements
+
+let groceryList = ["bread", "tomatoes", "milk"];
+
+groceryList[1] = "avocados";
+
+console.log(groceryList); //output: [ 'bread', 'avocados', 'milk' ]
+
+// !=============================================
+// !=============================================
+
+// * 69. Arrays with let and const
+
+let condiments = ["Ketchup", "Mustard", "Soy Sauce", "Sriracha"];
+
+const utensils = ["Fork", "Knife", "Chopsticks", "Spork"];
+
+condiments[0] = "Mayo";
+
+console.log(condiments);
+
+condiments = ["Mayo"];
+
+console.log(condiments);
+
+utensils[3] = "Spoon";
+
+console.log(utensils);
