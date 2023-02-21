@@ -97,6 +97,8 @@
 // * 93. Nested Objects
 // * 94. Pass By Reference
 // * 95. Looping Through Objects
+// * 96. The this Keyword
+// * 97. Arrow Functions and this
 
 // !=============================================
 // !=============================================
@@ -2277,3 +2279,32 @@ for (let crewMember in spaceship.crew) {
 // Dan: Aerospace Engineering
 // Clementine: Physics
 // Shauna: Conservation Science
+
+// !=============================================
+// !=============================================
+
+// * 96. The this Keyword
+
+const robot = {
+  model: "1E78V2",
+  energyLevel: 100,
+  provideInfo() {
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.`;
+  },
+};
+
+console.log(robot.provideInfo());
+
+// !=============================================
+// !=============================================
+
+// * 97. Arrow Functions and this
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
+  },
+};
+
+robot.checkEnergy();
