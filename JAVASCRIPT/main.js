@@ -87,6 +87,9 @@
 // * 83. Do...While Statements
 // * 84. The break Keyword
 // * 85. PROJECT: Whale Talk
+// * 86. Exercise: Spelling Wizard
+// * 87. Exercise: Pokemon Catcher
+// * 88. Creating Object Literals
 
 // !=============================================
 // !=============================================
@@ -1995,3 +1998,51 @@ const resultString = resultArray.join("").toUpperCase();
 console.log(resultString);
 
 //output: UUEEIEEAUUEE
+
+// !=============================================
+// !=============================================
+
+// * 86. Exercise: Spelling Wizard
+
+// First, let’s write a program to help us improve our spelling skills.
+
+// Given the spellingWord, use a for...of loop to log each letter using console.log().
+
+const spellingWord = "hippopotamus";
+
+// Write your code below
+
+for (const spell of spellingWord) {
+  console.log(spell);
+}
+
+// * 87. Exercise: Pokemon Catcher
+
+// Write a for...of loop that iterates through our pokemonList array.
+
+// Inside the block of the for...of loop, use console.log() and string interpolation as modeled above to log each
+// element in the pokemon array within the string 'You caught a 'X'!' For example, the first iteration of the loop
+// should print ‘You caught a Pikachu!’ to the console.
+
+// One of the elements, 'Yoshi', is not a Pokemon. If you encounter 'Yoshi', use continue to skip this element
+// before it is logged to the console.
+
+const pokemonList = ["Pikachu", "Charizard", "Squirtle", "Yoshi", "Snorlax"];
+
+// Write your code below
+for (const pokemon of pokemonList) {
+  if (pokemon === "Yoshi") {
+    continue;
+  }
+  console.log(`You caught a ${pokemon}`);
+}
+
+// !=============================================
+// !=============================================
+
+// * 88. Creating Object Literals
+
+let fasterShip = {
+  "Fuel Type": "Turbo Fuel",
+  color: "silver",
+};
