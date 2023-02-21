@@ -99,6 +99,8 @@
 // * 95. Looping Through Objects
 // * 96. The this Keyword
 // * 97. Arrow Functions and this
+// * 98. Privacy
+// * 99. Getters
 
 // !=============================================
 // !=============================================
@@ -2308,3 +2310,40 @@ const robot = {
 };
 
 robot.checkEnergy();
+
+// !=============================================
+// !=============================================
+
+// * 98. Privacy
+
+const robot = {
+  _energyLevel: 100,
+  recharge() {
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`);
+  },
+};
+
+robot._energyLevel = "high";
+robot.recharge();
+
+// !=============================================
+// !=============================================
+
+// * 99. Getters
+
+const robot = {
+  _model: "1E78V2",
+  _energyLevel: 100,
+  get energyLevel() {
+    if (typeof this._energyLevel === "number") {
+      return "My current energy level is " + this._energyLevel;
+    } else {
+      return "System malfunction: cannot retrieve energy level";
+    }
+  },
+};
+
+console.log(robot.energyLevel);
+
+//output: My current energy level is 100
