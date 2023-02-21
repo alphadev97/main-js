@@ -79,6 +79,13 @@
 // * 75. Nested Arrays
 // * 76. PROJECT: Secret Message
 // * 77. Repeating Tasks Manually
+// * 78. The For Loop
+// * 79. Looping in Reverse
+// * 80. Looping through Arrays
+// * 81. Nested Loops
+// * 82. The While Loop
+// * 83. Do...While Statements
+// * 84. The break Keyword
 
 // !=============================================
 // !=============================================
@@ -1779,3 +1786,181 @@ console.log(vacationSpots[2]);
 // Makkah
 // Madina
 // Norway
+
+// !=============================================
+// !=============================================
+
+// * 78. The For Loop
+
+// Write your code below
+
+for (let counter = 5; counter < 11; counter++) {
+  console.log(counter);
+}
+
+for (let counter = 0; counter < 20; counter++) {
+  console.log(counter);
+}
+
+// output:
+// 10
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+// 11
+// 12
+// 13
+// 14
+// 15
+// 16
+// 17
+// 18
+// 19
+
+// !=============================================
+// !=============================================
+
+// * 79. Looping in Reverse
+
+// The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0
+for (let counter = 3; counter >= 0; counter--) {
+  console.log(counter);
+}
+
+for (let number = 20; number >= 0; number--) {
+  console.log(number);
+}
+
+//output:
+// 20
+// 19
+// 18
+// 17
+// 16
+// 15
+// 14
+// 13
+// 12
+// 11
+// 10
+// 9
+// 8
+// 7
+// 6
+// 5
+// 4
+// 3
+// 2
+// 1
+// 0
+
+// !=============================================
+// !=============================================
+
+// * 80. Looping through Arrays
+
+const vacationSpots = ["Bali", "Paris", "Tulum"];
+
+// Write your code below
+
+for (let i = 0; i < vacationSpots.length; i++) {
+  console.log("I would love to visit " + vacationSpots[i]);
+}
+
+//output:
+// I would love to visit Bali
+// I would love to visit Paris
+// I would love to visit Tulum
+
+// !=============================================
+// !=============================================
+
+// * 81. Nested Loops
+
+// Write your code below
+
+let bobsFollowers = ["Joe", "Marta", "Sam", "Erin"];
+let tinasFollowers = ["Sam", "Marta", "Elle"];
+let mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(bobsFollowers[i]);
+    }
+  }
+}
+
+// !=============================================
+// !=============================================
+
+// * 82. The While Loop
+
+const cards = ["diamond", "spade", "heart", "club"];
+
+// Write your code below
+
+let currentCard;
+
+while (currentCard != "spade") {
+  currentCard = cards[Math.floor(Math.random() * 4)];
+  console.log(currentCard);
+}
+
+//output:
+// heart
+// spade
+
+// !=============================================
+// !=============================================
+
+// * 83. Do...While Statements
+
+let cupsOfSugarNeeded = 3;
+let cupsAdded = 0;
+
+do {
+  cupsAdded++;
+  console.log(cupsAdded + " cup was added.");
+} while (cupsAdded < cupsOfSugarNeeded);
+
+//output
+// 1 cup was added.
+// 2 cup was added.
+// 3 cup was added.
+
+// !=============================================
+// !=============================================
+
+// * 84. The break Keyword
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+
+for (let i = 0; i < rapperArray.length; i++) {
+  console.log(rapperArray[i]);
+
+  if (rapperArray[i] === "Notorious B.I.G.") break;
+}
+
+console.log("And if you don't know, now you know.");
+
+// output
+// Lil' Kim
+// Jay-Z
+// Notorious B.I.G.
+// And if you don't know, now you know.
+
+// !=============================================
+// !=============================================
+
+// * 84. The break Keyword
