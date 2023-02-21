@@ -71,6 +71,14 @@
 // * 67. Accessing Elements
 // * 68. Update Elements
 // * 69. Arrays with let and const
+// * 70. The .length property
+// * 71. The .push() Method
+// * 72. The .pop() Method
+// * 73. More Array Methods
+// * 74. Arrays and Functions
+// * 75. Nested Arrays
+// * 76. PROJECT: Secret Message
+// * 77. Repeating Tasks Manually
 
 // !=============================================
 // !=============================================
@@ -1560,3 +1568,214 @@ console.log(condiments);
 utensils[3] = "Spoon";
 
 console.log(utensils);
+
+// !=============================================
+// !=============================================
+
+// * 70. The .length property
+
+const objectives = ["Learn a new language", "Read 52 books", "Run a marathon"];
+
+console.log(objectives.length); //output: 3
+
+// !=============================================
+// !=============================================
+
+// * 71. The .push() Method
+
+const chores = ["wash dishes", "do laundry", "take out trash"];
+
+chores.push("take out shapatar", "take out alpha");
+
+console.log(chores);
+
+// Output:
+// [ 'wash dishes',
+//   'do laundry',
+//   'take out trash',
+//   'take out shapatar',
+//   'take out alpha' ]
+
+// !=============================================
+// !=============================================
+
+// * 72. The .pop() Method
+
+const chores = [
+  "wash dishes",
+  "do laundry",
+  "take out trash",
+  "cook dinner",
+  "mop floor",
+];
+
+chores.pop();
+
+console.log(chores);
+
+// output: [ 'wash dishes', 'do laundry', 'take out trash', 'cook dinner' ]
+
+// !=============================================
+// !=============================================
+
+// * 73. More Array Methods
+
+const groceryList = [
+  "orange juice",
+  "bananas",
+  "coffee beans",
+  "brown rice",
+  "pasta",
+  "coconut oil",
+  "plantains",
+];
+
+groceryList.shift();
+
+console.log(groceryList);
+
+groceryList.unshift("popcorn");
+
+console.log(groceryList);
+
+console.log(groceryList.slice(1, 4));
+
+console.log(groceryList);
+
+const pastaIndex = groceryList.indexOf("pasta");
+
+console.log(pastaIndex);
+
+// output:
+// [ 'bananas',
+//   'coffee beans',
+//   'brown rice',
+//   'pasta',
+//   'coconut oil',
+//   'plantains' ]
+// [ 'popcorn',
+//   'bananas',
+//   'coffee beans',
+//   'brown rice',
+//   'pasta',
+//   'coconut oil',
+//   'plantains' ]
+// [ 'bananas', 'coffee beans', 'brown rice' ]
+// [ 'popcorn',
+//   'bananas',
+//   'coffee beans',
+//   'brown rice',
+//   'pasta',
+//   'coconut oil',
+//   'plantains' ]
+// 4
+
+// !=============================================
+// !=============================================
+
+// * 74. Arrays and Functions
+
+const concept = ["arrays", "can", "be", "mutated"];
+
+function changeArr(arr) {
+  arr[3] = "MUTATED";
+}
+
+changeArr(concept);
+
+console.log(concept);
+
+const removeElement = (newArr) => {
+  newArr.pop();
+};
+
+removeElement(concept);
+
+console.log(concept);
+
+//output:
+// [ 'arrays', 'can', 'be', 'MUTATED' ]
+// [ 'arrays', 'can', 'be' ]
+
+// !=============================================
+// !=============================================
+
+// * 75. Nested Arrays
+
+const numberClusters = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+const target = numberClusters[2][1];
+
+console.log(target); //output: 6
+
+// !=============================================
+// !=============================================
+
+// * 76. PROJECT: Secret Message
+
+let secretMessage = [
+  "Learning",
+  "is",
+  "not",
+  "about",
+  "what",
+  "you",
+  "get",
+  "easily",
+  "the",
+  "first",
+  "time,",
+  "it",
+  "is",
+  "about",
+  "what",
+  "you",
+  "can",
+  "figure",
+  "out.",
+  "-2015,",
+  "Chris",
+  "Pine,",
+  "Learn",
+  "JavaScript",
+];
+
+secretMessage.pop();
+
+console.log(secretMessage.length);
+
+secretMessage.push("to", "Program");
+
+secretMessage[7] = "right";
+
+secretMessage.shift();
+
+secretMessage.unshift("Programming");
+
+secretMessage.splice(6, 5, "know");
+
+console.log(secretMessage.join());
+
+//output
+// 23
+// Programming,is,not,about,what,you,know,it,is,about,what,you,can,figure,out.,-2015,,Chris,Pine,,Learn,to,Program
+
+// !=============================================
+// !=============================================
+
+// * 77. Repeating Tasks Manually
+
+const vacationSpots = ["Makkah", "Madina", "Norway"];
+
+console.log(vacationSpots[0]);
+console.log(vacationSpots[1]);
+console.log(vacationSpots[2]);
+
+//ouput
+// Makkah
+// Madina
+// Norway
