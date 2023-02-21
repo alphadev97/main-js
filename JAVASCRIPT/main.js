@@ -95,6 +95,7 @@
 // * 91. Property Assignment
 // * 92. Methods
 // * 93. Nested Objects
+// * 94. Pass By Reference
 
 // !=============================================
 // !=============================================
@@ -2184,3 +2185,8 @@ let capFave = spaceship.crew.captain["favorite foods"][0];
 passengers: [{ name: "Wolf" }];
 
 let firstPassenger = spaceship.passengers[0];
+
+// !=============================================
+// !=============================================
+
+// * 94. Pass By Reference
